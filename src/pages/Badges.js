@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import './styles/Badges.css';
 import confLogo from '../images/LOGO-MOVENU-BLANCO.png';
 import BadgesList from '../components/BadgesList';
+import BadgesListTwo from '../components/BadgesListTwo';
 import PageLoading from '../components/PageLoading';
 import PageError from '../components/PageError';
 import MiniLoader from '../components/MiniLoader';
@@ -84,7 +85,10 @@ class Badges extends React.Component {
             </Link>
           </div>
 
-          <BadgesList badges={this.state.data} badgesTwo={this.state.dataTwo} />
+          <BadgesList badges={this.state.data}/>
+          <BadgesListTwo badges={this.state.data}/>
+
+          
 
           {this.state.loading && <MiniLoader />}
         </div>
