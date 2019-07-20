@@ -73,25 +73,33 @@ class Badges extends React.Component {
           </div>
         </div>
 
+      <div className="Badges__list__container">
         <div className="Badges__container">
           <div className="Badges__buttons">
             <Link to="/badges/new" className="btn btn-primary">
               New State one
             </Link>
           </div>
+
+          <BadgesList badges={this.state.data}/>
+
+          {this.state.loading && <MiniLoader />}
+       </div>
+
+       </div>
+       <div className="Badges__list__container">
+
+        <div className="Badges__container">
           <div className="Badges__buttons_two">
             <Link to="/badges/newtwo" className="btn btn-primary">
               New State two
             </Link>
           </div>
-
-          <BadgesList badges={this.state.data}/>
           <BadgesListTwo badges={this.state.data}/>
-
-          
 
           {this.state.loading && <MiniLoader />}
         </div>
+      </div>
       </React.Fragment>
     );
   }

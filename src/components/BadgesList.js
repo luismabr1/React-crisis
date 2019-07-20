@@ -152,7 +152,7 @@ function BadgesList(props) {
 
         </div>
 
-
+{/* 
         <div className="form-group">
             <label>Filter Directives</label>
             <input
@@ -180,7 +180,7 @@ function BadgesList(props) {
               );
             })}
           </ul>
-        </div>
+        </div> */}
     
     </div>
 
