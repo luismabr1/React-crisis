@@ -16,12 +16,13 @@ class Badges extends React.Component {
     loading: true,
     error: null,
     data: undefined,
+    dataTwo: undefined,
   };
 
   componentDidMount() {
     this.fetchData();
-
     this.intervalId = setInterval(this.fetchData, 320000);
+
   }
 
   componentWillUnmount() {
@@ -33,22 +34,23 @@ class Badges extends React.Component {
 
     try {
       const data = await api.badges.list();
-      this.setState({ loading: false, data: data });
+      const dataTwo = await apiTwo.badgesTwo.list();
+      this.setState({ loading: false, data: data, dataTwo: dataTwo });
     } catch (error) {
       this.setState({ loading: false, error: error });
     }
   };
 
-  fetchDataTwo = async () => {
+  /* fetchDataTwo = async () => {
     this.setState({ loading: true, error: null });
 
     try {
       const dataTwo = await apiTwo.badgesTwo.list();
-      this.setState({ loading: false, data: dataTwo });
+      this.setState({ loading: false, dataTwo: dataTwo });
     } catch (error) {
       this.setState({ loading: false, error: error });
     }
-  };
+  }; */
 
   render() {
     if (this.state.loading === true && !this.state.data && !this.state.dataTwo) {
@@ -95,7 +97,7 @@ class Badges extends React.Component {
               New State two
             </Link>
           </div>
-          <BadgesListTwo badges={this.state.data}/>
+          <BadgesListTwo badgesTwo={this.state.dataTwo}/>
 
           {this.state.loading && <MiniLoader />}
         </div>

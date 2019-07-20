@@ -8,7 +8,7 @@ import PageLoading from '../components/PageLoading';
 import api from '../api';
 import apiTwo from '../api_two';
 
-class BadgeNew extends React.Component {
+class BadgeNew2 extends React.Component {
   state = {
     loading: false,
     error: null,
@@ -88,4 +88,4 @@ class BadgeNew extends React.Component {
   }
 }
 
-export default BadgeNew;
+export default BadgeNew2;

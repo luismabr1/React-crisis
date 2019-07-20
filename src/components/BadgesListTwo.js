@@ -30,19 +30,19 @@ class BadgesListItem extends React.Component {
   }
 }
 
-function useSearchBadges(badges) {
+function useSearchBadges(badgesTwo) {
   const [query, setQuery] = React.useState('');
-  const [filteredBadges, setFilteredBadges] = React.useState(badges);
+  const [filteredBadges, setFilteredBadges] = React.useState(badgesTwo);
 
   React.useMemo(() => {
-    const result = badges.filter(badge => {
+    const result = badgesTwo.filter(badge => {
       return `${badge.delegado}`
         .toLowerCase()
         .includes(query.toLowerCase());
     });
 
     setFilteredBadges(result);
-  }, [badges, query]);
+  }, [badgesTwo, query]);
 
   return { query, setQuery, filteredBadges };
 }
@@ -67,7 +67,7 @@ function useSearchBadges(badges) {
 
 
 function BadgesList(props) {
-  const badges = props.badges;
+  const badges = props.badgesTwo;
   /* const badgesTwo = props.badgesTwo;   */
 
   const { query, setQuery, filteredBadges } = useSearchBadges(badges);
