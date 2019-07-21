@@ -36,7 +36,7 @@ function useSearchBadges(badgesTwo) {
 
   React.useMemo(() => {
     const result = badgesTwo.filter(badge => {
-      return `${badge.comite}`
+      return `${badge.delegado}`
         .toLowerCase()
         .includes(query.toLowerCase());
     });
