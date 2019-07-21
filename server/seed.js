@@ -4,10 +4,10 @@ const faker = require('faker');
 const md5 = require('md5');
 
 function createBadges(limit = 5) {
-  const result = [];
+  const result = []; 
 
   for (let i = 0; i < limit; i++) {
-/*     const firstName = faker.name.firstName();
+/*  const firstName = faker.name.firstName();
     const lastName = faker.name.lastName();
     const email = faker.internet.email(); */
 

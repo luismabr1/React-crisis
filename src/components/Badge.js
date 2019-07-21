@@ -6,7 +6,7 @@ import Gravatar from './Gravatar';
 
 class Badge extends React.Component {
   render() {
-    return (
+    return ( 
       <div className="Badge">
         <div className="Badge__header">
           <img src={confLogo} alt="Logo de la conferencia" />
