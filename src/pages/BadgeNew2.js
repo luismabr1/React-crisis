@@ -5,7 +5,6 @@ import header from '../images/platziconf-logo.svg';
 import Badge from '../components/Badge';
 import BadgeForm from '../components/BadgeForm';
 import PageLoading from '../components/PageLoading';
-import api from '../api';
 import apiTwo from '../api_two';
 
 class BadgeNew2 extends React.Component {

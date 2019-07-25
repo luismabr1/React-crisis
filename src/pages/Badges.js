@@ -75,6 +75,9 @@ class Badges extends React.Component {
           </div>
         </div>
 
+
+      <div className="Badges__container">
+
       <div className="Badges__list__container">
         <div className="Badges__container">
           <div className="Badges__buttons">
@@ -101,6 +104,7 @@ class Badges extends React.Component {
 
           {this.state.loading && <MiniLoader />}
         </div>
+      </div>
       </div>
       </React.Fragment>
     );
