@@ -25,13 +25,13 @@ function createBadges(limit = 5) {
   return result;
 }
 
-function createBadgesTwo(limit = 5) {
+/* function createBadgesTwo(limit = 5) {
   const result = [];
 
   for (let i = 0; i < limit; i++) {
-/*     const firstName = faker.name.firstName();
+     const firstName = faker.name.firstName();
     const lastName = faker.name.lastName();
-    const email = faker.internet.email(); */
+    const email = faker.internet.email(); 
 
     result.push({
       id: faker.random.uuid(),
@@ -45,26 +45,26 @@ function createBadgesTwo(limit = 5) {
   }
 
   return result;
-}
+} */
 
 function main() {
   const data = {
     badges: createBadges(),
   };
 
-  const dataTwo = {
+/*   const dataTwo = {
     badgesTwo: createBadgesTwo(),
-  };
+  }; */
 
   fs.writeFileSync(
     path.resolve(__dirname, 'db.json'),
     JSON.stringify(data, null, 4)
   );
 
-  fs.writeFileSync(
+ /*  fs.writeFileSync(
     path.resolve(__dirname, 'dbTwo.json'),
     JSON.stringify(dataTwo, null, 4)
-  );
+  ); */
 }
 
 main();

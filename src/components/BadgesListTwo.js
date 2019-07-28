@@ -36,10 +36,13 @@ function useSearchBadges(badgesTwo) {
 
   React.useMemo(() => {
     const result = badgesTwo.filter(badge => {
+      if(badge.clave==="comiteb"){
       return `${badge.delegado}`
         .toLowerCase()
         .includes(query.toLowerCase());
-    });
+      }
+      });
+  
 
     setFilteredBadges(result);
   }, [badgesTwo, query]);
