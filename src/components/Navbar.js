@@ -14,6 +14,12 @@ class Navbar extends React.Component {
             <span className="font-weight-light">Crisis</span>
             <span className="font-weight-bold">Staff</span>
           </Link>
+
+          <Link className="Navbar__brand" to="/">
+            <span>
+              Unicameral
+            </span>
+          </Link>  
         </div>
       </div>
     );

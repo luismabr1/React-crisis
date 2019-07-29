@@ -37,7 +37,7 @@ function useSearchBadges(badges) {
   React.useMemo(() => {
     const result = badges.filter(badge => {
       if(badge.clave==="comitea"){
-      return `${badge.comite}`
+      return `${badge.descripcion}`
         .toLowerCase()
         .includes(query.toLowerCase());
       }
