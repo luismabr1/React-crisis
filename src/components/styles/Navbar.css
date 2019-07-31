@@ -19,3 +19,14 @@
   margin-right: 0.5rem;
   width: 50px;
 }
+
+.Navbar__items{
+  padding-left: 30px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.Navbar__items:hover {
+  color: #ffffff;
+  text-decoration: none;
+}

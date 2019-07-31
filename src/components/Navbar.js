@@ -9,17 +9,29 @@ class Navbar extends React.Component {
     return (
       <div className="Navbar">
         <div className="container-fluid">
+        <div className="Navbar__brand">
           <Link className="Navbar__brand" to="/">
             <img className="Navbar__brand-logo" src={logo} alt="Logo" />
             <span className="font-weight-light">Crisis</span>
             <span className="font-weight-bold">Staff</span>
           </Link>
-
-          <Link className="Navbar__brand" to="/">
-            <span>
-              Unicameral
-            </span>
+          <Link  to="/">
+              <span className="font-weight-light Navbar__items">
+                Crisis Unicameral
+              </span>
           </Link>  
+          <Link  to="/">
+              <span className="font-weight-light Navbar__items">
+                Crisis Bicameral
+              </span>
+          </Link>  
+          <Link  to="/">
+              <span className="font-weight-light Navbar__items">
+                Security Council
+              </span>
+            </Link>  
+
+            </div> 
         </div>
       </div>
     );
