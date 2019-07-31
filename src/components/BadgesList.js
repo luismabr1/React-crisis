@@ -49,31 +49,11 @@ function useSearchBadges(badges) {
   return { query, setQuery, filteredBadges };
 }
 
-/*   function useSearchBadgesTwo(badgesTwo) {
-  const [queryTwo, setQueryTwo] = React.useState('');
-  const [filteredBadgesTwo, setFilteredBadgesTwo] = React.useState(badgesTwo);
-
-  React.useMemo(() => {
-    const result = badgesTwo.filter(badgeTwo => {
-      return `${badgeTwo.delegado}`
-        .toLowerCase()
-        .includes(queryTwo.toLowerCase());
-    });
-
-    setFilteredBadgesTwo(result);
-  }, [badgesTwo, queryTwo]);
-
-  return { queryTwo, setQueryTwo, filteredBadgesTwo};
-}  
- */
-
 
 function BadgesList(props) {
   const badges = props.badges;
-  /* const badgesTwo = props.badgesTwo;   */
 
   const { query, setQuery, filteredBadges } = useSearchBadges(badges);
-  /* const { queryTwo, setQueryTwo, filteredBadgesTwo } = useSearchBadgesTwo(badgesTwo); */
 
   if (filteredBadges.length === 0) {
     return (
@@ -98,29 +78,6 @@ function BadgesList(props) {
     );
   } 
 
-/*    if (filteredBadgesTwo.length === 0) {
-    return (
-      <div>
-        <div className="form-group">
-          <label>Filter Directives</label>
-          <input
-            type="text"
-            className="form-control"
-            value={queryTwo}
-            onChange={e => {
-              setQueryTwo(e.target.value);
-            }}
-          />
-        </div>
- 
-        <h3>No directives were found</h3>
-        <Link className="btn btn-primary" to="/badges/new">
-          Create new state
-        </Link>
-      </div>
-    );
-  }
- */
   return (
 
     <div className="Badges__container">
@@ -153,36 +110,6 @@ function BadgesList(props) {
           </ul>
 
         </div>
-
-{/* 
-        <div className="form-group">
-            <label>Filter Directives</label>
-            <input
-              type="text"
-              placeholder="Buscar en comite B "
-              className="form-control"
-              value={query}
-              onChange={e => {
-                setQuery(e.target.value);
-              }}
-            />
-        
-
-          <ul className="list-unstyled">
-            {filteredBadges.map(badge => {
-              return (
-                <li key={badge.id}>
-                  <Link
-                    className="text-reset text-decoration-none"
-                    to={`/badges/${badge.id}`}
-                  >
-                    <BadgesListItem badge={badge} />
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </div> */}
     
     </div>
 
