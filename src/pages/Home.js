@@ -19,7 +19,7 @@ export default class Home extends Component {
               />
 
               <h1>Base de Datos Crisis</h1>
-              <Link className="btn btn-primary" to="/badges">
+              <Link className="btn btn-primary" to="/comite">
                 Entrar 
               </Link>
             </div>

@@ -3,7 +3,10 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Layout from './Layout';
 import Home from '../pages/Home';
-import Badges from '../pages/Badges';
+import Committees from '../pages/Committees';
+import Bicameral from '../pages/Bicameral';
+import Unicameral from '../pages/Unicameral';
+import Security from '../pages/Security';
 import BadgeNew from '../pages/BadgeNew';
 import BadgeNew2 from '../pages/BadgeNew2';
 import BadgeDetails from '../pages/BadgeDetailsContainer';
@@ -16,7 +19,10 @@ function App() {
       <Layout>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/badges" component={Badges} />
+          <Route exact path="/comite" component={Committees} />
+          <Route exact path="/comite/bicameral" component={Bicameral} />
+          <Route exact path="/comite/unicameral" component={Unicameral} />
+          <Route exact path="/comite/security" component={Security} />
           <Route exact path="/badges/new" component={BadgeNew} />
           <Route exact path="/badges/newtwo" component={BadgeNew2} />
           <Route exact path="/badges/:badgeId" component={BadgeDetails} />

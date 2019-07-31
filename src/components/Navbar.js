@@ -15,21 +15,21 @@ class Navbar extends React.Component {
             <span className="font-weight-light">Crisis</span>
             <span className="font-weight-bold">Staff</span>
           </Link>
-          <Link  to="/">
+          <Link  to="/comite/unicameral">
               <span className="font-weight-light Navbar__items">
                 Crisis Unicameral
               </span>
           </Link>  
-          <Link  to="/">
+          <Link  to="/comite/bicameral">
               <span className="font-weight-light Navbar__items">
                 Crisis Bicameral
               </span>
           </Link>  
-          <Link  to="/">
+          <Link  to="/comite/security">
               <span className="font-weight-light Navbar__items">
                 Security Council
               </span>
-            </Link>  
+           </Link>  
 
             </div> 
         </div>
