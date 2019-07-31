@@ -1,11 +1,11 @@
 import React from 'react';
 
 import './styles/BadgeNew.css';
-import header from '../images/platziconf-logo.svg';
+import header from '../images/LOGO-MOVENU-BLANCO.png';
 import Badge from '../components/Badge';
 import BadgeForm from '../components/BadgeForm';
 import PageLoading from '../components/PageLoading';
-import apiTwo from '../api_two';
+import apiTwo from '../api_two'; 
 
 class BadgeNew2 extends React.Component {
   state = {

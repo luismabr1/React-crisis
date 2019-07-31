@@ -1,8 +1,8 @@
 import React from 'react';
 
 import './styles/BadgeNew.css';
-import header from '../images/platziconf-logo.svg';
-import Badge from '../components/Badge';
+import header from '../images/LOGO-MOVENU-BLANCO.png';
+import Badge from '../components/Badge'; 
 import BadgeForm from '../components/BadgeForm';
 import PageLoading from '../components/PageLoading';
 import api from '../api';

@@ -1,8 +1,8 @@
 import React from 'react';
 
 import './styles/BadgeEdit.css';
-import header from '../images/platziconf-logo.svg';
-import Badge from '../components/Badge';
+import header from '../images/LOGO-MOVENU-BLANCO.png';
+import Badge from '../components/Badge'; 
 import BadgeForm from '../components/BadgeForm';
 import PageLoading from '../components/PageLoading';
 import api from '../api';
@@ -68,7 +68,7 @@ class BadgeEdit extends React.Component {
       <React.Fragment>
         <div className="BadgeEdit__hero">
           <img
-            className="BadgeEdit__hero-image img-fluid"
+            className="BadgeEdit__hero-image"
             src={header}
             alt="Logo"
           />

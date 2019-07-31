@@ -13,6 +13,11 @@
   display: flex;
   justify-content: center;
 }
+.Badge__header img{
+
+  width: 180px;
+  height: auto;
+}
 
 .Badge__section-name {
   display: flex;

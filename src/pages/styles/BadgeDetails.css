@@ -7,6 +7,11 @@
   color: #ffffff;
 }
 
+.BadgeDetails__hero img{
+  width: 300px;
+  height: auto;
+}
+
 .BadgeDetails__hero-attendant-name {
   display: flex;
   flex-direction: column;

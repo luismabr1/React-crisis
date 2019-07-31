@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './styles/Badge.css';
-import confLogo from '../images/badge-header.svg';
+import confLogo from '../images/LOGO-MOVENU-ABRA-BLANCO.png';
 import Gravatar from './Gravatar';
 
 class Badge extends React.Component {

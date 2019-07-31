@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import './styles/BadgeDetails.css';
-import confLogo from '../images/platziconf-logo.svg';
+import confLogo from '../images/LOGO-MOVENU-BLANCO.png';
 import Badge from '../components/Badge';
 import DeleteBadgeModal from '../components/DeleteBadgeModal';
 
