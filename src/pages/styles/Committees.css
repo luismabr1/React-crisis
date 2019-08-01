@@ -18,34 +18,13 @@
   padding: 0 1rem;
 }  
 
-.Badges__list__container {
-  width: 50%;
-  height: auto;
-  max-width: 1080px;
-  padding: 0 1rem;
-  display: inline-table;
- 
-}
 
 .Badges__list__container>.form-group{
   display: inline-block;
   width: 50%;
   padding: 10px;
 }
-/*---------------------------BOTONES---------------------------------------------*/
 
-.Badges__list__container>.Badges__buttons{
-  display: inline-block;
-  width: 50%;
-  padding: 10px;
-}
-.Badges__list__container>.Badges__buttons_two{
-  display: inline-block;
-  width: 50%;
-  padding: 10px;
-}
-
-/*---------------------------BOTONES---------------------------------------------*/
 
 .Badges_conf-logo {
   margin-bottom: 2rem;
@@ -53,11 +32,28 @@
 }
 
 .Badges__buttons {
-  padding: 0;
-  display: flex;
-  justify-content: flex-start;
+  margin: 50px 50px 50px 50px;
+  display: grid ;
+  justify-content: flex-start ;
   margin-bottom: 1rem;
 }
+
+.Badges__buttons a {
+  padding: 10px 50px 20px 20px;
+  width: 33%;
+  border: 1px solid black;
+  text-decoration: none;
+
+}
+.Badges__buttons a:hover {
+  padding: 10px 50px;
+  width: 33%;
+  border: 1px solid green;
+  background: gray;
+  text-decoration: none;
+
+}
+
 .Badges__buttons_two {
   display: flex;
   justify-content: flex-end;

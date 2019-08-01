@@ -2,7 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import './styles/Committees.css';
-import CommitteesList from '../components/CommitteeList';
+import LinkBicameral from '../components/LinkBicameral';
+import LinkSecurity from '../components/LinkSecurity';
+import LinkUnicameral from '../components/LinkUnicameral';
 import confLogo from '../images/LOGO-MOVENU-BLANCO.png';
 
 
@@ -25,18 +27,22 @@ class Committees extends React.Component{
 
      <div className="Badges__container">
 
-     <div className="Badges__list__container">
-       <div className="Badges__container">
          <div className="Badges__buttons">
-           <Link to="/badges/new" className="btn btn-primary">
-                <CommitteesList />
+           <Link to="/comite/unicameral" >
+                <LinkUnicameral />
+            </Link>
+
+            <Link to="/comite/bicameral" >
+                <LinkBicameral />
+            </Link>
+
+            <Link to="/comite/security" >    
+                <LinkSecurity />
            </Link>
+
          </div>
-
-      </div>
-
-       </div>
      </div>
+
      </React.Fragment>
    )} 
    }
