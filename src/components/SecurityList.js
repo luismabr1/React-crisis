@@ -6,7 +6,7 @@ import Gravatar from './Gravatar';
 
 
 
-class UnicameralListItem extends React.Component {
+class SecurityListItem extends React.Component {
   render() {
     return (
       <div className="BadgesListItem">
@@ -36,7 +36,7 @@ function useSearchBadges(badges) {
 
   React.useMemo(() => {
     const result = badges.filter(badge => {
-      if(badge.clave==="comitec"){
+      if(badge.clave==="comited"){
       return `${badge.descripcion}`
         .toLowerCase()
         .includes(query.toLowerCase());
@@ -49,7 +49,7 @@ function useSearchBadges(badges) {
   return { query, setQuery, filteredBadges };
 }
 
-function UnicameralList(props) {
+function SecurityList(props) {
   const badges = props.badges;
 
 
@@ -103,7 +103,7 @@ function UnicameralList(props) {
                     className="text-reset text-decoration-none"
                     to={`/badges/${badge.id}`}
                   >
-                    <UnicameralListItem badge={badge} />
+                    <SecurityListItem badge={badge} />
                   </Link>
                 </li>
               );
@@ -122,4 +122,4 @@ function UnicameralList(props) {
 
 
 
-export default UnicameralList;
+export default SecurityList;

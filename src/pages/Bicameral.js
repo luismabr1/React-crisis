@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom';
 
 import './styles/Badges.css';
 import confLogo from '../images/LOGO-MOVENU-BLANCO.png';
-import BadgesList from '../components/BadgesList';
-import BadgesListTwo from '../components/BadgesListTwo';
+import BicameralList from '../components/BicameralList';
+import BicameralListTwo from '../components/BicameralListTwo';
 import PageLoading from '../components/PageLoading';
 import PageError from '../components/PageError';
 import MiniLoader from '../components/MiniLoader';
 import api from '../api';
 import apiTwo from '../api_two';
 
-class Badges extends React.Component {
+class Bicameral extends React.Component {
   state = {
     loading: true,
     error: null,
@@ -40,17 +40,6 @@ class Badges extends React.Component {
       this.setState({ loading: false, error: error });
     }
   };
-
-  /* fetchDataTwo = async () => {
-    this.setState({ loading: true, error: null });
-
-    try {
-      const dataTwo = await apiTwo.badgesTwo.list();
-      this.setState({ loading: false, dataTwo: dataTwo });
-    } catch (error) {
-      this.setState({ loading: false, error: error });
-    }
-  }; */
 
   render() {
     if (this.state.loading === true && !this.state.data && !this.state.dataTwo) {
@@ -86,7 +75,7 @@ class Badges extends React.Component {
             </Link>
           </div>
 
-          <BadgesList badges={this.state.data}/>
+          <BicameralList badges={this.state.data}/>
 
           {this.state.loading && <MiniLoader />}
        </div>
@@ -100,7 +89,7 @@ class Badges extends React.Component {
               New State two
             </Link>
           </div>
-          <BadgesListTwo badgesTwo={this.state.dataTwo}/>
+          <BicameralListTwo badgesTwo={this.state.dataTwo}/>
 
           {this.state.loading && <MiniLoader />}
         </div>
@@ -111,4 +100,4 @@ class Badges extends React.Component {
   }
 }
 
-export default Badges;
+export default Bicameral;

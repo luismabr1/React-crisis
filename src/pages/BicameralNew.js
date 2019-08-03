@@ -37,7 +37,7 @@ class BadgeNew extends React.Component {
       await api.badges.create(this.state.form);
       this.setState({ loading: false });
 
-      this.props.history.push('/comite/unicameral');
+      this.props.history.push('/comite/bicameral');
     } catch (error) {
       this.setState({ loading: false, error: error });
     }

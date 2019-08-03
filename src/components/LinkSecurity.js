@@ -1,7 +1,6 @@
 import React from 'react';
 import './styles/LinkSecurity.css';
 import CrisisYemen from '../images/crisisyemen.jpg';
-import Gravatar from './Gravatar';
 
 class CommitteesList extends React.Component {
     render() {

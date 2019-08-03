@@ -31,6 +31,30 @@
       "descripcion": "esta es arrecha",
       "asunto": "Luisbrte",
       "id": "Ndj10qi"
+    },
+    {
+      "delegado": "El que tal",
+      "comite": "unicameral",
+      "clave": "comitec",
+      "descripcion": "el perro podrido",
+      "asunto": "Supuesto asesinato",
+      "id": "pLvm9XS"
+    },
+    {
+      "delegado": "Valeria Zamora",
+      "comite": "sofisticada",
+      "clave": "comitec",
+      "descripcion": "Perro salton",
+      "asunto": "Asalto a embajada",
+      "id": "fGkBDvG"
+    },
+    {
+      "delegado": "Casius Marcellus",
+      "comite": "Camara baja",
+      "clave": "comited",
+      "descripcion": "Algo impoertante",
+      "asunto": "el perro rabioso",
+      "id": "5S0UENc"
     }
   ]
 }

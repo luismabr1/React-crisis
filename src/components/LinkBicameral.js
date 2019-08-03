@@ -2,7 +2,6 @@ import React from 'react';
 import './styles/LinkBicameral.css';
 import FotoFBI from '../images/fbi.jpg';
 import LaComision from '../images/mafia.jpg';
-import Gravatar from './Gravatar';
 
 class CommitteesList extends React.Component {
     render() {

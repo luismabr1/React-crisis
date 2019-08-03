@@ -8,6 +8,8 @@ import Bicameral from '../pages/Bicameral';
 import Unicameral from '../pages/Unicameral';
 import Security from '../pages/Security';
 import BadgeNew from '../pages/BadgeNew';
+import UnicameralNew from '../pages/UnicameralNew';
+import SecurityNew from '../pages/SecurityNew';
 import BadgeNew2 from '../pages/BadgeNew2';
 import BadgeDetails from '../pages/BadgeDetailsContainer';
 import BadgeEdit from '../pages/BadgeEdit';
@@ -24,6 +26,8 @@ function App() {
           <Route exact path="/comite/unicameral" component={Unicameral} />
           <Route exact path="/comite/security" component={Security} />
           <Route exact path="/badges/new" component={BadgeNew} />
+          <Route exact path="/comite/unicameral/new" component={UnicameralNew} />
+          <Route exact path="/comite/security/new" component={SecurityNew} />
           <Route exact path="/badges/newtwo" component={BadgeNew2} />
           <Route exact path="/badges/:badgeId" component={BadgeDetails} />
           <Route exact path="/badges/:badgeId/edit" component={BadgeEdit} />
