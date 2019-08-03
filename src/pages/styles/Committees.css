@@ -15,7 +15,8 @@
 .Badges__container {
   width: 100%;
   height: auto;
-  padding: 0 1rem;
+  padding: 0 20px 20px 20px;
+  text-align: center;
 }  
 
 
@@ -39,20 +40,11 @@
 }
 
 .Badges__buttons a {
-  padding: 10px 50px 20px 20px;
+  padding: 10px 10px 10px 10px;
   width: 33%;
-  border: 1px solid black;
   text-decoration: none;
-
 }
-.Badges__buttons a:hover {
-  padding: 10px 50px;
-  width: 33%;
-  border: 1px solid green;
-  background: gray;
-  text-decoration: none;
 
-}
 
 .Badges__buttons_two {
   display: flex;

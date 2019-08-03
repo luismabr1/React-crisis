@@ -26,6 +26,7 @@ class Committees extends React.Component{
 
 
      <div className="Badges__container">
+       <h1>Comites de Crisis Disponibles</h1> 
 
          <div className="Badges__buttons">
            <Link to="/comite/unicameral" >
