@@ -8,8 +8,8 @@ function createBadges(limit = 5) {
 
   for (let i = 0; i < limit; i++) {
 /*  const firstName = faker.name.firstName();
-    const lastName = faker.name.lastName();
-    const email = faker.internet.email(); */
+    const lastName = faker.name.lastName(); */
+    const email = faker.internet.email();
 
     result.push({
       id: faker.random.uuid(),
@@ -18,7 +18,7 @@ function createBadges(limit = 5) {
       asunto,
       descripcion,
       clave,
-      //avatarUrl: `https://www.gravatar.com/avatar/${md5(email)}?d=identicon`,
+      avatarUrl: `https://www.gravatar.com/avatar/${md5(email)}?d=identicon`,
     });
   }
 

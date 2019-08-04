@@ -73,7 +73,7 @@ class Badges extends React.Component {
               Nuevo Portafolio
             </Link>
 
-            <Link to="/badges/new" className="btn btn-secondary">
+            <Link to="/comite/newDirective" className="btn btn-secondary">
               Nueva Directiva Publica
             </Link>
           </div>

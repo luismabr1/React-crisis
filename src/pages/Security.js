@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import './styles/Badges.css';
+
 import confLogo from '../images/LOGO-MOVENU-BLANCO.png';
 import SecurityList from '../components/SecurityList';
 import PageLoading from '../components/PageLoading';

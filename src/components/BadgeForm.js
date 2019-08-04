@@ -71,6 +71,17 @@ class BadgeForm extends React.Component {
               value={this.props.formValues.clave}
             />
           </div>
+        
+          <div className="form-group">
+            <label>Avatar</label>
+            <input
+              onChange={this.props.onChange}
+              className="form-control"
+              type="text"
+              name="email"
+              value={this.props.formValues.email}
+            />
+          </div> 
 
           <button onClick={this.handleClick} className="btn btn-primary">
             Save

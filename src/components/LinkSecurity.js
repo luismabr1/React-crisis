@@ -7,7 +7,7 @@ class CommitteesList extends React.Component {
       return (
         <div className="Security__face">
             <div className="div-img">
-                <img className="img" src={CrisisYemen}></img>
+                <img className="img" src={CrisisYemen} alt="Crisis en Yemen"></img>
                 <div className="title">Hola Mundo Bicameral</div>  
             </div>
         </div>

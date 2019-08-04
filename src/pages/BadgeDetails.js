@@ -35,6 +35,7 @@ function BadgeDetails(props) {
               descripcion={badge.descripcion}
               asunto={badge.asunto}
               clave={badge.clave}
+              email={badge.email}
             />
           </div>
           <div className="col">

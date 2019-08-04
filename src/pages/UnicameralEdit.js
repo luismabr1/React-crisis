@@ -1,24 +1,40 @@
 import React from 'react';
 
-import './styles/BadgeNew.css';
+import './styles/BadgeEdit.css';
 import header from '../images/LOGO-MOVENU-BLANCO.png';
 import Badge from '../components/Badge'; 
 import BadgeForm from '../components/BadgeForm';
 import PageLoading from '../components/PageLoading';
 import api from '../api';
 
-class BadgeNew extends React.Component {
+class BadgeEdit extends React.Component {
   state = {
-    loading: false,
+    loading: true,
     error: null,
     form: {
       delegado: '',
       comite: '',
-      clave: '',
       descripcion: '',
+      clave: '',
       asunto: '',
       email: '',
     },
+  };
+
+  componentDidMount() {
+    this.fetchData();
+  }
+
+  fetchData = async e => {
+    this.setState({ loading: true, error: null });
+
+    try {
+      const data = await api.badges.read(this.props.match.params.badgeId);
+
+      this.setState({ loading: false, form: data });
+    } catch (error) {
+      this.setState({ loading: false, error: error });
+    }
   };
 
   handleChange = e => {
@@ -35,10 +51,10 @@ class BadgeNew extends React.Component {
     this.setState({ loading: true, error: null });
 
     try {
-      await api.badges.create(this.state.form);
+      await api.badges.update(this.props.match.params.badgeId, this.state.form);
       this.setState({ loading: false });
 
-      this.props.history.push('/comite/security');
+      this.props.history.push('/comite/unicameral');
     } catch (error) {
       this.setState({ loading: false, error: error });
     }
@@ -49,11 +65,11 @@ class BadgeNew extends React.Component {
       return <PageLoading />;
     }
 
-    return ( 
+    return (
       <React.Fragment>
-        <div className="BadgeNew__hero">
+        <div className="BadgeEdit__hero">
           <img
-            className="BadgeNew__hero-image img-fluid"
+            className="BadgeEdit__hero-image"
             src={header}
             alt="Logo"
           />
@@ -63,18 +79,18 @@ class BadgeNew extends React.Component {
           <div className="row">
             <div className="col-6">
               <Badge
-                delegado={this.state.form.delegado || 'DELEGATE'}
-                comite={this.state.form.comite || 'COMMITTE'}
-                asunto={this.state.form.asunto || 'ASUNTO'}
-                descripcion={this.state.form.descripcion || 'DESCRIPTION'}
-                clave={this.state.form.clave || 'KEY'}
+                delegado={this.state.form.delegado || 'DELEGADO'}
+                comite={this.state.form.comite || 'COMITE'}
+                calve={this.state.form.email || 'ASUNTO'}
+                descripcion={this.state.form.descripcion || 'DESCRIPCION'}
+                asunto={this.state.form.asunto || 'CLAVE'}
                 email={this.state.form.email || 'EMAIL'}
                 avatarUrl="https://www.gravatar.com/avatar/21594ed15d68ace3965642162f8d2e84?d=identicon"
               />
             </div>
 
             <div className="col-6">
-              <h1>Nueva Directiva</h1>
+              <h1>Edit Attendant</h1>
               <BadgeForm
                 onChange={this.handleChange}
                 onSubmit={this.handleSubmit}
@@ -89,4 +105,4 @@ class BadgeNew extends React.Component {
   }
 }
 
-export default BadgeNew;
+export default BadgeEdit;

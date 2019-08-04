@@ -38,7 +38,7 @@ class BadgeNew extends React.Component {
       await api.badges.create(this.state.form);
       this.setState({ loading: false });
 
-      this.props.history.push('/comite/security');
+      this.props.history.push('/comite/unicameral');
     } catch (error) {
       this.setState({ loading: false, error: error });
     }
@@ -69,7 +69,7 @@ class BadgeNew extends React.Component {
                 descripcion={this.state.form.descripcion || 'DESCRIPTION'}
                 clave={this.state.form.clave || 'KEY'}
                 email={this.state.form.email || 'EMAIL'}
-                avatarUrl="https://www.gravatar.com/avatar/21594ed15d68ace3965642162f8d2e84?d=identicon"
+                avatarUrl="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?d=identicon"
               />
             </div>
 

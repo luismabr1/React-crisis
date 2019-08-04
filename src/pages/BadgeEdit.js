@@ -17,6 +17,7 @@ class BadgeEdit extends React.Component {
       descripcion: '',
       clave: '',
       asunto: '',
+      email: '',
     },
   };
 
@@ -53,7 +54,7 @@ class BadgeEdit extends React.Component {
       await api.badges.update(this.props.match.params.badgeId, this.state.form);
       this.setState({ loading: false });
 
-      this.props.history.push('/badges');
+      this.props.history.push('/comite/bicameral');
     } catch (error) {
       this.setState({ loading: false, error: error });
     }
@@ -83,6 +84,7 @@ class BadgeEdit extends React.Component {
                 calve={this.state.form.email || 'ASUNTO'}
                 descripcion={this.state.form.descripcion || 'DESCRIPCION'}
                 asunto={this.state.form.asunto || 'CLAVE'}
+                email={this.state.form.email || 'EMAIL'}
                 avatarUrl="https://www.gravatar.com/avatar/21594ed15d68ace3965642162f8d2e84?d=identicon"
               />
             </div>
